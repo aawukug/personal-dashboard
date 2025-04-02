@@ -1,0 +1,81 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* TYPOGRAPHY */
+
+.time {
+    text-align: center;
+    font-size: 3.75rem
+}
+
+p {
+    margin: 0;
+}
+
+.city-temp {
+    font-size: 1.875rem;
+}
+
+.image-author {
+    font-size: 1.48rem;
+}
+
+.crypto-name {
+    margin-left: 5px;
+}
+
+
+/* LAYOUT */
+
+body { 
+    color: #FFFFFF;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: 1px 1px 3px #aaaaaa;
+    background: no-repeat center center fixed;
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+    padding: 15px;
+}
+
+.crypto-container,
+.weather-container {
+    font-size: 1.25rem;
+}
+
+.crypto-weather-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.crypto-img-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+
+/* IMAGE */
+.icon-city {
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+
+
+
