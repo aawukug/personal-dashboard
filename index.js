@@ -1,8 +1,3 @@
-// unsplash api ("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature")
-// coingecko api www.coingeecko.com/api/documentations/v3#/
-// openweather api https://apis.scrimba.com/openweathermap/data/2.5/weather
-
-
 //FETCHING IMAGES FROM UNSPLASH API 
 fetch("https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=motivational-quotes")
     .then(response => response.json())
@@ -37,7 +32,6 @@ fetch('https://api.coingecko.com/api/v3/coins/ethereum')
     .catch(error => {
         // ERROR MESSAGE WHEN THERE'S AN ISSUE WITH API
         document.getElementById('crypto-container').textContent = `Price not available`
-        console.log(error)
     })
 
 
@@ -70,19 +64,17 @@ fetch('https://ipapi.co/json/')
         return response.json()
     })
     .then(weatherData => {
-        console.log(weatherData)
         const weatherIcon = weatherData.current.condition.icon
-        const tempCity = weatherData.current.temp_c     
+        const tempCelcius = weatherData.current.temp_c     
         const cityName = weatherData.location.name
         document.getElementById('weather-container').innerHTML = `
         <div class="icon-city">
             <img src="https://${weatherIcon}">
-            <p class="city-temp">${tempCity}</p>
+            <p class="temp-celcius">${tempCelcius}°</p>
         </div>
             <p>${cityName}</p>`
     })
     .catch(error => {
-        console.error(error)
         document.getElementById('weather-container').textContent = `Weather not available`
     })
 
